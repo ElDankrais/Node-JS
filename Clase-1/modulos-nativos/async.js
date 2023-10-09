@@ -1,6 +1,5 @@
 //Node.js SÍ MANEJA PROMESAS, SIIIIIIIIIUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
 
-const {readFile} = require('node:fs/promises');
 // const { promisify } = require('node:util');
 // const readFilePromise = promisify(fs.readFile);
 
@@ -20,8 +19,9 @@ const {readFile} = require('node:fs/promises');
 
 //promisify
 
-// const fs = require('node:fs');
-
+//const fs = require('node:fs');
+// const { promisify } = require('node:util');
+// const readFilePromise = promisify(fs.readFile);
 
 // console.log('=======leyendo archivo=====');
 // readFilePromise('archivo.txt', 'utf-8')
@@ -39,6 +39,28 @@ const {readFile} = require('node:fs/promises');
 
 //¿Cómo solucionarlo sin .mjs? Con una IIFE
 
+// (
+//     async () => {
+//         console.log('================================Leyendo el archivo================================');
+//         const text = await readFile('archivo.txt', 'utf-8')
+//         console.log('primer texto: ', text)
+
+//         console.log('---->Cosas mientras leo el archivo');
+//     }
+// )()
+
+
+
+// const {readFile} = require('node:fs/promises');
+
+// readFile('archivo.txt', 'utf-8')
+// .then((text) => console.log(text))
+// .catch((err) => console.log(err));
+
+// console.log('---->Cosas mientras leo el archivo');
+
+const {readFile} = require('node:fs/promises');
+
 (
     async () => {
         console.log('================================Leyendo el archivo================================');
@@ -48,5 +70,3 @@ const {readFile} = require('node:fs/promises');
         console.log('---->Cosas mientras leo el archivo');
     }
 )()
-
-

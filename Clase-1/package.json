@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "moment": "^2.29.4",
+    "picocolors": "^1.0.0"
+  }
+}

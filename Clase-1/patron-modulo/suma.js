@@ -1,7 +1,7 @@
-function sum (a, b) {
+function suma (a, b) {
     return a + b;
 }
 
 //obligar nombre con el obj
 
-module.exports = {sum};
+module.exports = {suma};

@@ -19,3 +19,4 @@ console.log(base);
 
 const extension = path.extname('/tmp/bin/vfrvwrgv(egrgrwq2g/24egrw3aghrwhrwghw3rg4wtqw34wee5/password.txt');
 console.log(extension);
+
