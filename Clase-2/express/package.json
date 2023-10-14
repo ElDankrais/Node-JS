@@ -2,19 +2,18 @@
   "name": "express",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "app-starter.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app-starter.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:2": "nodemon pokemon/ditto-starter.js"
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
   "devDependencies": {
     "nodemon": "^3.0.1"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "zod": "^3.22.4"
   }
 }
