@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    article {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    img {
+        height: auto;
+        width: 320px;
+        max-width: 100%;
+    }
+    </style>
+    <script type="module">
+    fetch('http://localhost:1234/pokemon')
+        .then(res => res.json())
+        .then(pokemons => {
+            console.log(pokemons);
+            const html = pokemons.map(pokemon => {
+                return `
+                <li>
+                    <h2>${pokemon.name}</h2>
+                </li>
+                `
+            }).join('')
+
+        document.querySelector('main').innerHTML = html;
+        })
+    </script>
+</head>
+<body>
+    <main>
+    </main>
+</body>
+</html>
